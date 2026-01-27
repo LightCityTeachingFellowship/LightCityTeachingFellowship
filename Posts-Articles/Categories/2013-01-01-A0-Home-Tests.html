@@ -1,0 +1,45 @@
+---
+layout: cat-homepageTEMPLATE
+title: "Tests"
+permalink: /Tests/
+categories: ["HomePageArticle-Tests"]
+---
+
+<div id="categories" class="homeBody-section leftRight-space-16 bottom-space-20">
+	<div class="homeResources-grid-containter bg-color" style="margin-bottom: -30px;">
+		<h1 class="titles">Tests</h1>
+		<p style="margin: 0">A Collection of Essential Test Resources.</p>
+	</div>
+	{% assign subcatarray = "Old Covenant,General Test"|split:',' %}
+	
+	{% for subcat in subcatarray %}
+	{% for page in site.pages %}
+	{% if page.categories contains "Tests" %}
+	{% if page.subsection contains subcat %}
+	<div class="homeResources-grid-containter bg-color bottom-space-20">
+		{% for page in site.pages %}
+		{% if page.categories contains "Tests" %}
+		{% if page.subsection contains subcat %}
+				<h2 class="titles">{{ subcat }}</h2>
+				<ol>
+					{% break %}
+					{% endif %}
+					{% endif %}
+					{% endfor %}
+					{% for page in site.pages %}
+		{% if page.categories contains "Tests" %}
+		{% if page.subsection contains subcat %}
+					<li class="all-links">
+						<a href="{% if site.baseurl == "" %}{{page.url}}{% elsif site.baseurl != "" %}/{{site.baseurl}}{{page.url}}{% endif %}">{{ page.title }}</a> &nbsp; <small class="archive-date-summary">{{ page.date | date: "%a, %b %d, %y" }}.</small>
+					</li>
+					{% endif %}
+					{% endif %}
+					{% endfor %}
+				</ol>
+		</div>
+	{% break %}
+	{% endif %}
+	{% endif %}
+	{% endfor %}
+	{% endfor %}
+</div>
