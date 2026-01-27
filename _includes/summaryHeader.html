@@ -60,7 +60,7 @@
                                         </a>{% endif %}{% endfor %}
                                     </div>
                                     <div class="mobile-headerLinks transition">
-                                        {% for page in site.pages %} {% if page.title contains "LightCity-Teaching-Fellowship" %}
+                                        {% for page in site.pages %} {% if page.title contains "church" %}
                                         <a class="linkTitle transition" href="{% if site.baseurl == "" %}{{page.url}}{% elsif site.baseurl != "" %}/{{site.baseurl}}{{page.url}}{% endif %}">
                                             <span>Articles</span>
                                         </a>{% endif %}{% endfor %}
@@ -138,7 +138,7 @@
                                     </a>{% endif %}{% endfor %}
                                 </div>
                                 <div class="header-links-li transition">
-                                    {% for page in site.pages %} {% if page.title contains "LightCity-Teaching-Fellowship" %}
+                                    {% for page in site.pages %} {% if page.title contains "church" %}
                                     <a class="iconLink transition" href="{% if site.baseurl == "" %}{{page.url}}{% elsif site.baseurl != "" %}/{{site.baseurl}}{{page.url}}{% endif %}">
                                         Articles
                                     </a>{% endif %}{% endfor %}

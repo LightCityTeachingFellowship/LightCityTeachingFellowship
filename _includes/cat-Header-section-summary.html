@@ -16,7 +16,7 @@
                             <div id="myDropdown" class="myDropdown transition">
                                 <div class="mobile-homeHeaderNav active-link">
                                     <div class="mobile-headerLinks transition">
-                                        {% for page in site.pages %}{% if page.title contains "LightCity-Teaching-Fellowship" %}
+                                        {% for page in site.pages %}{% if page.title contains "church" %}
                                         <a class="linkTitle transition" href="{% if site.baseurl == "" %}{{page.url}}{% elsif site.baseurl != "" %}/{{site.baseurl}}{{page.url}}{% endif %}">
                                             Articles
                                         </a>{% endif %}{% endfor %}
@@ -93,7 +93,7 @@
                     <div class="headerUL">
                         <div class="header-links active-link">
                             <div class="header-links-li transition">
-                                {% for page in site.pages %}{% if page.title contains "LightCity-Teaching-Fellowship" %}
+                                {% for page in site.pages %}{% if page.title contains "church" %}
                                 <a class="iconLink transition"
                                     href="{% if site.baseurl == "" %}{{page.url}}{% elsif site.baseurl != "" %}/{{site.baseurl}}{{page.url}}{% endif %}">
                                     <span>Articles</span>

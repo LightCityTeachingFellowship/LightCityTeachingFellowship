@@ -68,7 +68,7 @@
                             <div class="min-height content">
                                 <ul class="footerLinks-lists active-link">
                                     <li>
-                                        {% for page in site.pages %}{% if page.title contains "LightCity-Teaching-Fellowship" %}
+                                        {% for page in site.pages %}{% if page.title contains "church" %}
                                         <a href="{% if site.baseurl == "" %}{{page.url}}{% elsif site.baseurl != "" %}/{{site.baseurl}}{{page.url}}{% endif %}">
                                             <span>Articles</span>
                                         </a>{% endif %}{% endfor %}
