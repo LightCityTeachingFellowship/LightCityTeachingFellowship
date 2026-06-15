@@ -223,7 +223,7 @@ function runFirstPartOfCode() {
                         const videoDetailsURL = `https://www.googleapis.com/youtube/v3/videos?id=${this.videoId}&part=snippet,contentDetails,liveStreamingDetails&key=${apiKey}`;            
                         fetch(videoDetailsURL, {
                             headers: {
-                                'Referer': 'https://*.lightcityfellowship.com' // Replace with your website URL
+                                'Referer': 'https://*.lightcityfellowship.com/*' // Replace with your website URL
                             }
                         })
                         .then(response => response.json())
