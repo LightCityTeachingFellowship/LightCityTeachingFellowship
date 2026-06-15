@@ -221,11 +221,11 @@ function runFirstPartOfCode() {
                         // Fetch additional video details from YouTube Data API v3
                         const apiKey = 'AIzaSyDpDUtcguArU8tt5d8J5w65Nw-pkno-UoI';
                         const videoDetailsURL = `https://www.googleapis.com/youtube/v3/videos?id=${this.videoId}&part=snippet,contentDetails,liveStreamingDetails&key=${apiKey}`;            
-                        fetch(videoDetailsURL, {
-                            headers: {
-                                'Referer': 'https://*.lightcityfellowship.com/*' // Replace with your website URL
-                            }
-                        })
+                        // fetch(videoDetailsURL, {
+                        //     headers: {
+                        //         'Referer': 'https://*.lightcityfellowship.com/*' // Replace with your website URL
+                        //     }
+                        // })
                         .then(response => response.json())
                         .then(detailsData => {
                             const duration = detailsData.items[0].contentDetails.duration;
